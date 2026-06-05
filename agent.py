@@ -16,14 +16,6 @@ if _env_file.exists():
             k, v = line.split("=", 1)
             os.environ.setdefault(k.strip(), v.strip())
 
-# Load from Streamlit secrets if available (Streamlit Cloud)
-try:
-    import streamlit as st
-    _key = st.secrets.get("ANTHROPIC_API_KEY")
-    if _key:
-        os.environ["ANTHROPIC_API_KEY"] = _key
-except Exception:
-    pass
 
 MODEL = "claude-haiku-4-5-20251001"
 
@@ -144,6 +136,14 @@ Seja conciso (máx 3 parágrafos). Não invente dados — apenas explique as cap
 
 class AstraAgent:
     def __init__(self):
+        # Load API key from Streamlit secrets if available (Streamlit Cloud)
+        try:
+            import streamlit as st
+            key = st.secrets.get("ANTHROPIC_API_KEY")
+            if key:
+                os.environ["ANTHROPIC_API_KEY"] = key
+        except Exception:
+            pass
         self.client = anthropic.Anthropic()
 
     def _call(self, system: str, user: str, max_tokens: int = 1024) -> str:
@@ -237,5 +237,4 @@ class AstraAgent:
             except Exception:
                 return {
                     "type": "chat",
-                    "explanation": "Não consegui processar essa pergunta. Tente perguntar sobre vendas, produtos, faturamento, pedidos ou clientes.",
-                }
+                    "explanation": "Não consegui processar essa pergunta. Tente perguntar sobre ven
