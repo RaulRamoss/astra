@@ -33,10 +33,13 @@ st.markdown("""
 header[data-testid="stHeader"] { display: none !important; }
 [data-testid="stToolbar"]      { display: none !important; }
 [data-testid="stDecoration"]   { display: none !important; }
-[data-testid="stBottom"] {
+[data-testid="stBottom"],
+[data-testid="stBottomBlockContainer"] {
     background: transparent !important;
     border-top: none !important;
     box-shadow: none !important;
+    visibility: visible !important;
+    display: block !important;
 }
 footer { display: none !important; }
 .block-container { padding-top: 2rem !important; }
@@ -388,8 +391,4 @@ for msg in st.session_state.messages:
 
 # Handle suggestion button clicks
 if st.session_state.pending_question:
-    q = st.session_state.pending_question
-    st.session_state.pending_question = None
-    process_question(q, conn, agent)
-
-# Chat in
+    q = st.session_state.pe
