@@ -12,6 +12,10 @@ import duckdb
 import streamlit as st
 from PIL import Image
 
+# Inject API key from Streamlit secrets before importing agent
+if "ANTHROPIC_API_KEY" in st.secrets:
+    os.environ["ANTHROPIC_API_KEY"] = st.secrets["ANTHROPIC_API_KEY"]
+
 from agent import AstraAgent
 from charts import create_chart
 
@@ -387,9 +391,4 @@ for msg in st.session_state.messages:
 # Handle suggestion button clicks
 if st.session_state.pending_question:
     q = st.session_state.pending_question
-    st.session_state.pending_question = None
-    process_question(q, conn, agent)
-
-# Chat input
-if prompt := st.chat_input("Faça uma pergunta sobre seus dados..."):
-    process_question(prompt, conn, agent)
+    st.session_state.pending_questio
