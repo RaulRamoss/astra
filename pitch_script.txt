@@ -1,0 +1,235 @@
+================================================================
+  ASTRA — PITCH SCRIPT  |  5 MINUTOS  |  TCC FIAP
+================================================================
+
+[DICA GERAL]
+Fale devagar. Cada [PAUSA] = respira, olha para a plateia, espera 2 segundos.
+Não leia o texto — use como guia. Treine até soar natural.
+
+================================================================
+  ABERTURA — O PORQUÊ  [~40 segundos]
+================================================================
+
+Trabalho com dados há 6 anos.
+
+[PAUSA]
+
+E uma coisa que eu percebi nesse tempo é que uma parcela
+considerável do meu dia não era análise —
+
+[PAUSA]
+
+era responder dúvida de quem não é de tecnologia.
+
+"Por que esse número tá diferente do mês passado?"
+"Como esse indicador é calculado?"
+"Qual regra tá sendo aplicada aqui?"
+
+[PAUSA — olha para a plateia]
+
+Perguntas legítimas. Mas que tomavam tempo,
+interrompiam o fluxo, e se repetiam toda semana.
+
+[PAUSA]
+
+Eu queria dar autonomia para essas pessoas.
+Sem precisar estar no meio do caminho toda vez.
+
+[PAUSA LONGA — deixa pousar]
+
+================================================================
+  PROBLEMA  [~30 segundos]
+================================================================
+
+O caminho óbvio seria: conecta uma IA nos dados,
+a pessoa pergunta em português, recebe a resposta.
+
+[PAUSA]
+
+Mas o problema é que a maioria das implementações
+manda a pergunta direto pro modelo e torce pro SQL sair certo.
+
+[PAUSA]
+
+Uma pergunta como "o que você faz?" vira um SELECT.
+O modelo alucina uma coluna que não existe.
+A confiança vai embora.
+
+[PAUSA — fala mais devagar]
+
+A Astra foi construída para não fazer isso.
+
+[PAUSA LONGA]
+
+================================================================
+  SOLUÇÃO  [~60 segundos]
+================================================================
+
+A Astra resolve isso de forma simples:
+
+você pergunta em português...
+
+[PAUSA]
+
+...ela responde com dados.
+
+[PAUSA]
+
+Sem SQL. Sem planilhas. Sem depender de ninguém.
+
+[PAUSA CURTA]
+
+---
+
+A Astra é uma analista de dados com IA,
+construída com três tecnologias:
+
+  · Streamlit — uma interface web limpa e intuitiva
+
+  · DuckDB — um banco de dados analítico ultra-rápido,
+              rodando 100% local, sem nuvem
+
+  · Claude Haiku da Anthropic — o modelo de IA que entende
+    sua pergunta e gera a análise
+
+[PAUSA CURTA]
+
+O fluxo é direto:
+
+você digita uma pergunta
+→ a IA converte para SQL
+→ executa no banco
+→ te entrega resposta, gráfico e os dados brutos.
+
+Tudo em segundos.
+
+[PAUSA]
+
+================================================================
+  DEMONSTRAÇÃO  [~60 segundos]
+================================================================
+
+[SE TIVER COMPUTADOR: abra o app e mostre ao vivo]
+[SE TIVER VÍDEO: "Deixa eu mostrar como ela funciona na prática."]
+
+---
+
+Vou perguntar para ela: "Quais são os 10 produtos mais vendidos em 2024?"
+
+[PAUSA — aguarda o resultado aparecer]
+
+Olha o que acontece —
+resposta em texto, gráfico já formatado,
+o SQL que foi executado, e os dados brutos.
+
+[PAUSA CURTA]
+
+Agora: "Qual o faturamento mensal de 2025?"
+
+[PAUSA]
+
+Linha do tempo, tendência — tudo organizado.
+
+[PAUSA CURTA]
+
+"Como as vendas se distribuem por estado?"
+
+[PAUSA — deixa o gráfico falar]
+
+Simples assim.
+
+[PAUSA]
+
+================================================================
+  TECNOLOGIA & DIFERENCIAIS  [~30 segundos]
+================================================================
+
+O que diferencia a Astra não é só a IA. É a arquitetura:
+
+  · O banco roda local — os dados da empresa nunca saem
+    do ambiente dela
+
+  · A IA classifica cada pergunta antes de gerar SQL —
+    evita erros e respostas sem sentido
+
+  · A interface guia o usuário com sugestões,
+    sem exigir nenhum conhecimento técnico
+
+[PAUSA]
+
+================================================================
+  IMPACTO  [~20 segundos]
+================================================================
+
+O mercado de analytics está em expansão acelerada.
+
+Mas a maior parte das ferramentas é cara, complexa,
+e pensada para times de dados.
+
+A Astra é para quem toma decisão —
+o gerente, o dono, o analista de negócio
+que não quer depender de intermediários.
+
+[PAUSA]
+
+================================================================
+  FECHAMENTO  [~20 segundos]
+================================================================
+
+[Fala devagar, com convicção — não com pressa]
+
+A Astra não substitui o analista de dados.
+
+[PAUSA]
+
+Ela democratiza o acesso à análise.
+
+[PAUSA LONGA]
+
+É um TCC que começa como projeto acadêmico —
+mas resolve um problema real, com tecnologia real,
+para pessoas reais.
+
+[PAUSA]
+
+Obrigado.
+
+[PAUSA — não saia correndo, fica em pé por 2 segundos]
+
+================================================================
+  TIMING DE REFERÊNCIA
+================================================================
+
+  0:00 – 0:30   Abertura
+  0:30 – 1:10   Problema
+  1:10 – 2:10   Solução
+  2:10 – 3:10   Demo
+  3:10 – 3:40   Tecnologia
+  3:40 – 4:00   Impacto
+  4:00 – 4:20   Fechamento
+  4:20 – 5:00   Perguntas da banca
+
+================================================================
+  SOBRE O VÍDEO DE DEMONSTRAÇÃO
+================================================================
+
+Se não tiver computador disponível, gravar um vídeo curto
+(1 minuto) é a melhor opção. Sugestão de roteiro:
+
+  1. Abre o app com a tela bem visível (sem barra de notificações)
+  2. Digita: "Quais são os 10 produtos mais vendidos em 2024?"
+     → Mostra o gráfico aparecer
+  3. Digita: "Qual o faturamento mensal de 2025?"
+     → Mostra a linha do tempo
+  4. Clica numa sugestão da sidebar
+     → Mostra como é intuitivo para quem nunca usou
+
+  Ferramentas para gravar:
+  · Windows: Win + G  (Xbox Game Bar, já vem no Windows 11)
+  · OBS Studio (gratuito, melhor qualidade)
+  · Loom (grava e já sobe na nuvem, fácil de compartilhar)
+
+  Dica: grave sem áudio — você fala por cima durante a apresentação.
+  Coloca o vídeo em loop caso precise de mais tempo explicando.
+
+================================================================
